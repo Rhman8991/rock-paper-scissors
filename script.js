@@ -31,3 +31,6 @@ const playRound = (humanChoice, computerChoice) => {
         console.log(`You lose! ${humanChoice} loses to ${computerChoice}. Current score - Player: ${humanScore}, Computer: ${computerScore}`);
     }
 };
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
