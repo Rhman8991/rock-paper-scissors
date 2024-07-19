@@ -13,9 +13,6 @@ const getHumanChoice = () => {
     return userInput;
 };
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
 const playGame = () => {
     const rounds = 5;
     let humanScore = 0;
@@ -36,4 +33,12 @@ const playGame = () => {
             console.log(`You lose! ${humanChoice} loses to ${computerChoice}. Current score - Player: ${humanScore}, Computer: ${computerScore}`);
         }
     };
+
+    for (let i  = 1; i <= rounds; i++) {
+        console.log(`Round ${i}`)
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+    }
+
 };
