@@ -34,3 +34,7 @@ const playRound = (humanChoice, computerChoice) => {
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
+
+const playGame = () => {
+    const rounds = 5;
+};
