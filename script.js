@@ -50,4 +50,4 @@ const playGame = () => {
     }
 };
 
-playGame()
+playGame();
