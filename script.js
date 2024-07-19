@@ -15,3 +15,19 @@ const getHumanChoice = () => {
 
 let humanScore = 0;
 let computerScore = 0;
+
+const playRound = (humanChoice, computerChoice) => {
+    if (humanChoice === computerChoice) {
+        console.log(`Is a tie! Both choose ${humanChoice}. Current score - Player: ${humanScore}, Computer: ${computerScore}`)
+    } else if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+    ) {
+        humanScore++;
+        console.log(`You win! ${humanChoice} beat ${computerChoice}. Current score - Player: ${humanScore}, Computer: ${computerScore}`);
+    } else {
+        computerScore++;
+        console.log(`You lose! ${humanChoice} loses to ${computerChoice}. Current score - Player: ${humanScore}, Computer: ${computerScore}`);
+    }
+};
